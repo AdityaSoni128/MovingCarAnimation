@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+    animation: flyBody linear infinite 4s  ;
+  
+}
+.containor{
+    background-image: url(background.jpg) ;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+.trees{
+    background-image: url(trees.png) ;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    bottom: 27vh;
+    
+}
+.track{
+ background-image: url(track.png) ;
+    background-repeat: repeat-x;
+    width: 800vw;
+    height: 30vh;
+    position: absolute;
+    bottom: 0vh;
+    animation: moveTrack linear infinite 8s ;
+}
+
+.car {
+    position: absolute;
+    background-image: url(car_body.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 30vw;
+    width: 32vw;
+    height: 10vw;
+    bottom: 10vh;
+      animation: flyTrack linear infinite 1s  ;
+}
+.leftwheel img{
+    position: relative;
+    width: 7vw;
+    top: 7.6vh;
+    left: 4vw;
+    
+    animation: wheelRotation linear infinite .3s  ;
+}
+.rightwheel img{
+    position: relative;
+    width: 7vw;
+    bottom: 7.8vh;
+    left: 21.6vw;
+   
+    animation: wheelRotation linear infinite .3s  ;
+}
+@keyframes wheelRotation {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes moveTrack {
+    100%{
+        transform: translateX(-500vw);
+    }
+}
+@keyframes flyTrack {
+    0%{
+        transform: translatey(-1vh);
+    }
+    50%{
+        transform: translatey(0.7vh);
+    }
+    100%{
+        transform: translatey(-1vh);
+    }
+}
+@keyframes flyBody {
+    0%{
+        transform: translatey(-5vh);
+    }
+    50%{
+        transform: translatey(5vh);
+    }
+    100%{
+        transform: translatey(-5vh);
+    }
+}
